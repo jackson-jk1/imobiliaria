@@ -1,0 +1,35 @@
+
+<main>
+
+<div class="centro">
+<br>
+    <button class="botao-login" onclick="location.href='/dashboard/listaradministradores';">Listar Administradores</button>
+    <button class="botao-login" onclick="location.href='/dashboard';">Dashboard</button>
+</div>
+
+<div class="wrapper fadeInDown">
+    <div class="formContent">
+        <div class="">
+        <?php if(isset($this->view->msg)) { ?>
+                <span class="alert alert-info"><?=$this->view->msg?></span>
+            <?php } ?>
+            <h1 class="titulo-login">Cadastrar administrador</h1>
+            <form method="post" action="/dashboard/cadastraradministrador">
+                <div class="form-group">
+                    <input type="text" class="botao-login botao-login-texto" name="nome" placeholder="Nome" id="inputNome">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="botao-login botao-login-texto" name="email" placeholder="E-mail" id="inputEmail">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="botao-login botao-login-texto" name="senha" placeholder="Senha" id="inputSenha">
+                </div>
+                <button type="submit" class="botao-login">Cadastrar</button>
+                </div>
+            </form>
+    </div>
+</div>
+
+</main>
+<footer>
+</footer>

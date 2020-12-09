@@ -1,0 +1,26 @@
+<div class="conteudo">
+    <div class="row ">
+        <div class="col-xs-12">
+            <?php if(isset($this->view->msg)) { ?>
+                <span class="alert alert-info"></span>
+            <?php } ?>
+            <h1 class="page-header">Cadastro de Imóvel</h1>
+            <form method="post" action="cadastrarimovel" id="formcadastro" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="inputTitulo" class="control-label">Título</label>
+                    <input type="text" class="form-control" name="titulo" placeholder="Título" id="inputTitulo">
+                </div>
+                <div class="form-group">
+                    <label for="inputImagem" class="control-label">Imagem do imóvel</label>
+                    <input type="file" class="form-control-file" name="imagem" id="inputImagem" accept="image/jpeg, image/png">
+                </div>
+                <div class="form-group">
+                    <label for="inputDescricao" class="control-label">Descrição</label>
+                    <textarea form="formcadastro" class="form-control" name="descricao" id="inputDescricao"></textarea>
+                </div>
+                <button type="submit" class="botao-login">Cadastrar</button>
+            </form>
+            <button class="botao-login" onclick="location.href='/dashboard';">Dashboard</button>
+        </div>
+    </div>
+</div>

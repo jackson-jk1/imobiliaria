@@ -1,0 +1,29 @@
+
+<main>
+    <div class="conteudo">
+        <div class="centro">
+            <button class="botao-login" onclick="location.href='/dashboard/listaradministradores';">Listar Administradores</button>
+        </div>
+        <h2 class="centro">Editar administrador</h2>
+        <form class ="centro" method="post" action=<?="editaradministrador?id=".$this->view->administrador->id_usuario?> id="administradorform">
+            <label>Nome</label><br>
+            <input type="text" name="nome" value="<?=$this->view->administrador->nome?>" ><br>
+
+            <label>E-mail</label><br>
+            <input type="email" name="email" value="<?=$this->view->administrador->email?>" ><br>
+            
+            <label>Nova Senha</label><br>
+            <input type="password" name="senha" value=""><br>
+
+            <input type="submit" value="Editar" class="botao-login">
+        </form>
+        <div class="centro">
+            <?php if(isset($this->view->msg)) { ?>
+                <span class="alert alert-info"><?=$this->view->msg?></span>
+            <?php } ?>
+        </div>
+    </div>
+
+</main>
+<footer>
+</footer>

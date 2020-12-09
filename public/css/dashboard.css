@@ -1,0 +1,34 @@
+.center-div{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 600px;
+  border-radius: 3px;
+}
+
+
+.lista {
+    background-color: rgb(169, 192, 235);
+    padding: 90px; 
+    border-radius: 20px;
+    list-style-type: none;
+}
+
+.lista-dashboard {
+    text-decoration: none !important;
+    color: black;
+}
+
+.espacamento {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.espacamento:hover {
+    background-color: cornflowerblue;
+}

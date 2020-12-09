@@ -1,0 +1,19 @@
+{
+    "name":"nezukoimoveis",
+    "require":{
+        "php":">= 7.0",
+      "ext-pdo": "*",
+        "phpmailer/phpmailer": "^6.1"
+    },
+    "authors":[
+        {
+            "name":"Nícolas Teixeira",
+            "email":"nicolasteixeira3856@outlook.com"
+        }
+    ],
+    "autoload":{
+        "psr-4": {
+            "App\\":"App/"
+        }
+    }
+}

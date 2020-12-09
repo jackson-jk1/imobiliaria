@@ -1,0 +1,24 @@
+<main class="container-fluid">
+    <br />
+    <h1 class="centralizado">Todos os imoveis</h1>
+    <br />
+    <a href="/" class="btn btn-primary">volta para home</a>
+    <?php foreach($this->view->imoveis as $id_imoveis => $imoveis){ ?>
+        <div class="container">
+            <a href="<?= "/imovel?id=" . $imoveis['id_imovel'] ?>" class="list-group-item list-group-item-action">
+                <div class="row">
+                    <div class="col-8">
+                        <h2><?= $imoveis['titulo']?></h2>
+                        <p class="descricao-imovel">
+                            <?= $imoveis['descricao']?>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <img src=<?= "/img/imoveis/" . $imoveis['imagem'] ?> width="100%" height="300" alt="" loading="lazy">
+                    </div>
+                </div>
+            </a>
+        </div>
+        <br />
+    <?php } ?>
+</main>

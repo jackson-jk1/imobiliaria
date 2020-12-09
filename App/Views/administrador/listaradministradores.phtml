@@ -1,0 +1,34 @@
+<header>
+</header>
+
+<main>
+
+<div class="container"><br>
+<div class="centro">
+        <button class="botao-login" onclick="location.href='/dashboard/cadastraradministrador';">Cadastrar Administrador</button>
+        <button class="botao-login" onclick="location.href='/dashboard';">Dashboard</button>
+    </div>
+<table class ="table">
+            <thead>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Ações</th>
+            </thead>
+            <tbody>
+            <?php foreach($this->view->administradores as $id_usuario => $administrador){ ?>
+                <tr>
+                    <td><?= $administrador['nome']?></td>
+                    <td><?= $administrador['email']?></td>
+                    <td>
+                        <a href="<?="/dashboard/editaradministrador?id=".$administrador['id_usuario']?>" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+                        <a href="<?="/dashboard/deletaradministrador?id=".$administrador['id_usuario']?>" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+            <?php }?>
+            </tbody>
+            </br>
+        </table>
+    </div>
+</main>
+<footer>
+</footer>

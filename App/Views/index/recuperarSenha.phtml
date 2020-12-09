@@ -1,0 +1,21 @@
+<div class="wrapper fadeInDown">
+    <?php if(isset($this->view->msg)) { ?>
+        <span class="alert alert-info"><?=$this->view->msg?></span>
+    <?php } ?>
+    <div class="formContent">
+        <div class="">
+            <h2 class="titulo-login">
+                Recuperar a senha
+            </h2>
+        </div>
+        <form method="post" action="recuperarSenha">
+            <br />
+            <input type="email" id="login" class="botao-login botao-login-texto" name="email" placeholder="Email">
+            <br />
+            <input type="submit" class="botao-login" value="Enviar">
+        </form>
+        <div class="formFooter">
+            <a class="recuperar-senha" href="/login">Voltar ao Login</a>
+        </div>
+    </div>
+</div>

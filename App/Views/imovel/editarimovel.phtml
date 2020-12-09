@@ -1,0 +1,43 @@
+
+
+<header>
+
+</header>
+<main>
+    <div class="conteudo"> 
+        <h2 class="centro">Editar Imovél</h2>
+        <form method="post" enctype="multipart/form-data" action="editarimovel?id=<?=$this->view->imovel->id_imovel?>" id="imovelform">
+            <label>Título:</label> 
+            <input type="text" name="titulo" value="<?=$this->view->imovel->titulo?>"class="form-control" ></br>
+            
+            <label>Imagem:</label></br> 
+            <img src="/img/imoveis/<?=$this->view->imovel->imagem?>" class="imagem" ></br>
+            <input type="file" name="imagem" accept="imagem/png, imagem/jpeg" class="form-control-file arquivo"><br>
+            
+            <label>Descrição:</label> 
+            <textarea name="descricao" form="imovelform" class="form-control" rows="3"><?=$this->view->imovel->descricao?></textarea></br>
+            
+            <input type="hidden" name="id_usuario" value="<?=$this->view->imovel->id_imovel?>">
+            <input type="submit" value="Editar" class="botao-login"><br>         
+
+        </form>
+        <div>
+            <a href="/dashboard" class="btn btn-primary botao-login">Dashboard</a>
+        </div>
+    </div> 
+</main>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+
+
+
+
+

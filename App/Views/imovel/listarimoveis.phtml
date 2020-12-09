@@ -1,0 +1,31 @@
+<header>
+
+</header>
+<main>
+    <div class="container">
+    <div class="centro">
+        <button class="botao-login" onclick="location.href='/dashboard/cadastrarimovel';">Cadastrar Imovel</button>
+        <button class="botao-login" onclick="location.href='/dashboard';">Dashboard</button>
+    </div>
+    <table class="table">
+        <thead>
+            <th>Título</th>
+            <th>Ações</th>
+        </thead>
+        <tbody>
+        <?php foreach($this->view->imoveis as $id_imovel => $imoveis){ ?>    
+        <tr> 
+          <td><?= $imoveis['titulo']?></td>           
+           <td>    
+           <a href="<?= "/dashboard/editarimovel?id=".$imoveis['id_imovel']?>" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+           <a href="<?= "/dashboard/deletarimovel?id=".$imoveis['id_imovel']?>" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+            </td>                       
+        </tr>
+        <?php }?>
+        </tbody>           
+        </br>          
+    </table>
+    </div>
+</main>
+<footer>
+</footer>
